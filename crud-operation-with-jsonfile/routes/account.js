@@ -22,7 +22,7 @@ accountRoutes.post('/account/addaccount', (req, res) => {
     var existAccounts = getAccountData()
     const newAccountId = Math.floor(100000 + Math.random() * 900000)
  
-    existAccounts[newAccountId] = req.body
+    existAccounts[newAccountId] = req.body;
    
     console.log(existAccounts);
     saveAccountData(existAccounts);
